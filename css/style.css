@@ -1,12 +1,112 @@
 /*
- * Colors used
+ * DEFINITIONS
  */
 :root {
+  /* Colors used */
   --primary-color: #20457C;
   --background-color: #ECDFBD;
   --text-color: #3B3A35;
   --secondary-color: #FB6648;
   --tertiary-color: #5E3448;
+  /* Fonts used */
   --text-font: 'Montserrat';
   --heading-font: 'Crimson Text';
+}
+
+/* =====  General Styles  ======================================= */
+
+body {
+  font-family: var(--text-font), sans-serif;
+  font-size: 16px;
+  /* Sets the font size to 16px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+  color: var(--text-color);
+  /* background-color: var(--background-color); */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font), serif;
+}
+
+h1 {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+h3 {
+  font-size: 18px;
+  color: var(--tertiary-color);
+}
+
+div {
+  padding: 10px;
+  /* Adds a 10px inner spacing to all sides*/
+  margin: 10px;
+  /* Adds a 10px outer spacing to all sides*/
+}
+
+a {
+  color: var(--secondary-color);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  /* No underlining when hovering over a link */
+}
+
+a:visited {
+  /* visited link */
+  color: var(--tertiary-color);
+}
+
+a:active {
+  /* selected link */
+  color: var(--tertiary-color);
+}
+
+input,
+texture,
+select,
+button {
+  font-family: system-ui;
+}
+
+button {
+  /* overwrite browser defaults */
+  border: none;
+  /* reset the border */
+  font-family: inherit;
+  /* takes the font from the outer container */
+
+  /* style button */
+  background-color: var(--secondary-color);
+  /* color: white !important; */
+  color: var(--tertiary-color) !important;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid var(--tertiary-color);
+  border-right: 2px solid var(--tertiary-color);
+  /* width of the border, type, color */
+  transition: 0.2s opacity;
+}
+
+button:hover,
+button:focus {
+  cursor: pointer;
+  /* let's the mouse appear as hand when hovering over the button */
+  opacity: 0.75;
+  /* Reduces the opactiy of the button to 80% */
 }
