@@ -15,6 +15,10 @@
 
 /* =====  General Styles  ======================================= */
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: var(--text-font), sans-serif;
   font-size: 16px;
@@ -37,6 +41,8 @@ h6 {
 h1 {
   font-size: 30px;
   color: var(--primary-color);
+  text-align: center;
+
 }
 
 h2 {
@@ -109,4 +115,86 @@ button:focus {
   /* let's the mouse appear as hand when hovering over the button */
   opacity: 0.75;
   /* Reduces the opactiy of the button to 80% */
+}
+
+.adress {
+  padding-bottom: 10px;
+}
+
+/* =====  Layout styling  ======================================= */
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* No spacing to top and bottom and auto spacing to left and right */
+  padding: 0 20px;
+}
+
+.preview {
+  margin: 0;
+  padding: 0;
+}
+
+.columns-container {
+  font-size: 0;
+}
+
+.column-4 {
+  font-size: 16px;
+  width: 23%;
+  display: inline-block;
+  margin-right: 1%;
+  vertical-align: top;
+  text-align: center;
+}
+
+.column-4:last-child {
+  margin-right: 0;
+}
+
+/* =====  Navigation  ======================================= */
+
+.logo {
+  border-radius: 50%;
+}
+
+nav {
+  float: right;
+}
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  float: right;
+}
+
+.navigation > li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+
+@media all and (max-width: 500px) {
+  .logo {
+    /* Make logo smaller by changing it's height */
+    height: 50px;
+  }
+
+  h1,
+  h2 {
+    /* Reduce font-size of heading */
+    font-size: 20px;
+  }
+
+
+  .column-4 {
+    /* Modify 4-column to 1-columns */
+    width: 95%;
+    margin-right: 1%;
+  }
+
+  .column-4:nth-child(2) {
+    margin-right: 0;
+  }
 }
